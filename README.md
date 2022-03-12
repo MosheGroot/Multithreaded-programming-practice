@@ -4,7 +4,7 @@ Practing multithreading programming by Stepik course (https://stepik.org/course/
 
 ## Tasks list
 
-There is some simple and some **interesting** in my opinion tasks. **Interesting** tasks marked with **bold** formating.
+There are some simple and some **interesting** in my opinion tasks. **Interesting** tasks marked with **bold** formatting.
 
 2. [Containers. Smart pointers. Allocators.](/2_Containers_Smart-pointers_Allocators):
     * Derivative of polynomial
