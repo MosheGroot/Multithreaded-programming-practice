@@ -7,7 +7,7 @@ Actually, there is only simple tasks for practice before multithreaded programmi
 |-------------------|---------------------------------------------------------|
 |1. Containers      | Get derivative of polynomial                            |
 |2. Smart pointer   | Make your own simple smart pointer                      |
-|3. Small allocator | Make your own simle allocator with memory blocks control|
+|3. Small allocator | Make your own simple allocator with memory blocks control|
 
 
 ## Result
