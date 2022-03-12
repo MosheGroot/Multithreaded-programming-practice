@@ -2,6 +2,8 @@
 
 Practing multithreading programming by Stepik course (https://stepik.org/course/149)
 
+All of the topics has the own `README` and runtime `.GIF` with the result of the program. Be free in checking each directory.
+
 ## Tasks list
 
 There are some simple and some **interesting** in my opinion tasks. **Interesting** tasks marked with **bold** formatting.
