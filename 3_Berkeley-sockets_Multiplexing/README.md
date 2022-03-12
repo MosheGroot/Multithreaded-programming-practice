@@ -5,7 +5,7 @@ Some servers with using topics learned:
 |||
 |-------------------|---------------------------------------------------------|
 |1. Echo server     | Simple echo server                                      |
-|2. Messenger       | Messanger with multiplexing using `select` function     |
+|2. Messenger       | Messenger with multiplexing using `select` function     |
 
 
 ## Result
