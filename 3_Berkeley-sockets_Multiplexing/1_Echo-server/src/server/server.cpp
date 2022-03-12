@@ -18,6 +18,15 @@ void    EchoServer::init(const char *ip, uint16_t port)
   // create socket
   this->listening_socket_ = socket(AF_INET, SOCK_STREAM, 0);
 
+  // enable port reuse
+  int optval = 1;
+  setsockopt(
+    this->listening_socket_, 
+    SOL_SOCKET, SO_REUSEPORT,
+    &optval, sizeof(optval)
+  );
+
+
   // create sockaddr_in struct
   sockaddr_in addr;
   addr.sin_family = AF_INET;
