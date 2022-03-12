@@ -3,9 +3,12 @@
 
 Some servers with using topics learned:
 |||
-|-------------------|---------------------------------------------------------|
-|1. Echo server     | Simple echo server                                      |
-|2. Messenger       | Messenger with multiplexing using `select` function     |
+|-------------------|-----------------------------------------------------------|
+|1. Echo server     | Simple echo server                                        |
+|2. Messenger with `Select` | Messenger with multiplexing using `select` function |
+|3. Messenger with `Poll`   | Messenger with multiplexing using `poll` function   |
+
+
 
 
 ## Result
@@ -22,7 +25,7 @@ Some servers with using topics learned:
 
 
 
-### Messenger
+### Messenger with `Select`
 
 * class `MessengerServer` with:
   * `init()`: set up listening socket
@@ -39,6 +42,21 @@ Some servers with using topics learned:
 
 
 
+
+### Messenger with `Poll`
+
+Same as previous but optimized for `poll` function
+
+
+##### runtime
+
+![2022-03-13 01-01-16](https://user-images.githubusercontent.com/44144647/158036637-58fd2db5-f504-4611-b6df-e829c85649a4.gif)
+
+
+
+
 ## Learned new
 * UDP Lite
 * Local Descriptor Tables
+* Improved `select` usage
+* `Poll` usage
