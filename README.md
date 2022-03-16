@@ -17,3 +17,9 @@ There are some simple and some **interesting** in my opinion tasks. **Interestin
     * Simple echo server
     * **Messenger with Select function**
     * **Messenger with Poll function**
+
+4. Async I/O: there is no tasks, only quick event libraries overview:
+   * `libevent`
+   * `libev`
+   * `libuv`
+   * `boost::asio`
