@@ -7,6 +7,7 @@ Some simple tasks from the course + additional practice with my own examples:
 |1. `Processes/1_exec-cat.cpp`        | Just execute cat in forked proccess with error checks |
 |2. `Processes/2_Zombie-checker.cpp`  | Checking zombie child processes in non-blocking mode  |
 |2. `Signals/1_Immortal.cpp`          | Just making immortal (ignoring `SIGINT` and `SIGTERM`) child process |
+|2. `Signals/2_POSIX.cpp`             | Simple usage of POSIX signals (catching SIGINT) |
 
 
 
@@ -41,6 +42,14 @@ Just making immortal (ignoring `SIGINT` and `SIGTERM`) child process.
 
 ![Screen Recording 2022-03-17 at 12 29 11 PM](https://user-images.githubusercontent.com/44144647/158795441-6ad4b09a-ec8f-40c1-8f65-493f366bc1bf.gif)
 
+
+### `Signals/2_POSIX.cpp`
+
+Catch `SIGINT` with POSIX signal actions.
+
+##### runtime
+
+![Screen Recording 2022-03-17 at 2 35 23 PM](https://user-images.githubusercontent.com/44144647/158800629-0964cb62-1007-437d-84a7-113344e64e40.gif)
 
 
 ## Learned new
