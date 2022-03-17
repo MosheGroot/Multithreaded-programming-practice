@@ -6,6 +6,7 @@ Some simple tasks from the course + additional practice with my own examples:
 |-------------------|-----------------------------------------------------------|
 |1. `Processes/1_exec-cat.cpp`        | Just execute cat in forked proccess with error checks |
 |2. `Processes/2_Zombie-checker.cpp`  | Checking zombie child processes in non-blocking mode  |
+|2. `Signals/1_Immortal.cpp`          | Just making immortal (ignoring `SIGINT` and `SIGTERM`) child process |
 
 
 
