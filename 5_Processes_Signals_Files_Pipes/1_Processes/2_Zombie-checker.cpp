@@ -7,7 +7,7 @@
 #define CHILDS_NUMBER 10
 #define WORK_DELAY 2
 
-///////////////// CHILD
+//=========================  CHILD  ==========================
 
 int   childs_code(int number)
 {
@@ -29,7 +29,7 @@ int   childs_code(int number)
 
 
 
-///////////////// FORK
+//=========================   FORK   =========================
 
 int   create_childs()
 {
@@ -59,8 +59,8 @@ int   create_childs()
 
 
 
-///////////////// MAIN PROCESS
-//////////// CHECK
+//======================= MAIN PROCESS =======================
+// { CHECK }
 
 bool  check_zombies()
 {
@@ -96,7 +96,7 @@ bool  check_zombies()
 }
 
 
-//////////// WORK
+// { WORK }
 
 void  some_work()
 {
@@ -115,7 +115,7 @@ void  some_work()
 }
 
 
-///////////////// MAIN
+//=======================     MAIN     =======================
 
 int   main()
 {
