@@ -9,6 +9,7 @@ Some simple tasks from the course + additional practice with my own examples:
 |2. `Signals/1_Immortal.cpp`          | Just making immortal (ignoring `SIGINT` and `SIGTERM`) child process |
 |2. `Signals/2_POSIX.cpp`             | Simple usage of POSIX signals (catching SIGINT) |
 |3. `Files/1_FLock.cpp`               | Simple interactive read/write program with `flock` usage |
+|3. `Files/2_LockFile.cpp`            | Simple program with "lock file" concept usage |
 
 
 
@@ -66,6 +67,17 @@ In the runtime example, one program runs as reader and another one running as wr
 ##### runtime
 
 ![Screen Recording 2022-03-23 at 4 57 01 PM](https://user-images.githubusercontent.com/44144647/159718182-0c9bb199-d743-4892-88f8-8d7d6d56a877.gif)
+
+
+
+### `Files/2_LockFile.cpp`
+
+Simple program with "lock file" concept usage:
+* `.lock` file created in some provided work directory every time when program is executed
+
+##### runtime
+
+![Screen Recording 2022-03-23 at 5 33 38 PM](https://user-images.githubusercontent.com/44144647/159724650-076b4756-6ead-4fe9-b3ee-b6f2f9bef4b3.gif)
 
 
 
