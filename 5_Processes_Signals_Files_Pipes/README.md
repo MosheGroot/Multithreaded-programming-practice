@@ -8,6 +8,7 @@ Some simple tasks from the course + additional practice with my own examples:
 |2. `Processes/2_Zombie-checker.cpp`  | Checking zombie child processes in non-blocking mode  |
 |2. `Signals/1_Immortal.cpp`          | Just making immortal (ignoring `SIGINT` and `SIGTERM`) child process |
 |2. `Signals/2_POSIX.cpp`             | Simple usage of POSIX signals (catching SIGINT) |
+|3. `Files/1_FLock.cpp`               | Simple interactive read/write program with `flock` usage |
 
 
 
@@ -52,6 +53,24 @@ Catch `SIGINT` with POSIX signal actions.
 ![Screen Recording 2022-03-17 at 2 35 23 PM](https://user-images.githubusercontent.com/44144647/158800629-0964cb62-1007-437d-84a7-113344e64e40.gif)
 
 
+### `Files/1_FLock.cpp`
+
+There are two ways to run the program:
+* read file (with interactive lock and unlock ability)
+* write to the file (with exclusive lock)
+
+In the runtime example, one program runs as reader and another one running as writer:
+* Reader sometimes unlocks file to allow writer to write his data.
+* Writer waiting for exclusive lock every time he writes
+
+##### runtime
+
+![Screen Recording 2022-03-23 at 4 57 01 PM](https://user-images.githubusercontent.com/44144647/159718182-0c9bb199-d743-4892-88f8-8d7d6d56a877.gif)
+
+
+
 ## Learned new
 * Non-blocking `waitpid`'s flag (`WNOHANG`)
 * ANSI, POSIX and Real Time signals
+* Fun fact: files are actually IPC too
+* `flock` and "lock file" concept (like in some databases)
