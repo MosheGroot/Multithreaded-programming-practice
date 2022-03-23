@@ -47,10 +47,10 @@ static void    read_and_print(int fd)
 static void   print_read_commands(void)
 {
   std::cout << "Please enter one of the next options:\n"
-               "\t1. Read file and print\n"
-               "\t2. Unlock the file\n"
-               "\t3. Shared lock the file\n"
-               "\t4. End the program\n"
+               "\t" << OP_READ_READ << ". Read file and print\n"
+               "\t" << OP_READ_UNLOCK << "2. Unlock the file\n"
+               "\t" << OP_READ_LOCK << "3. Shared lock the file\n"
+               "\t" << OP_READ_STOP << "4. End the program\n"
             << std::endl;
 }
 
@@ -130,8 +130,8 @@ void    write_to_file(int fd, const char *data)
 static void   print_write_commands(void)
 {
   std::cout << "Please enter one of the next options:\n"
-               "\t1. Write data (from arguments)\n"
-               "\t2. End the program\n"
+               "\t" << OP_WRITE_WRITE <<"1. Write data (from arguments)\n"
+               "\t" << OP_WRITE_STOP <<"2. End the program\n"
             << std::endl;
 }
 
