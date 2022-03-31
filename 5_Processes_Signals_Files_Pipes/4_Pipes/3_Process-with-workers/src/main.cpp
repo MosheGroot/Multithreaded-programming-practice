@@ -6,7 +6,7 @@
 #include "EchoWorker/EchoWorker.hpp"
 
 template <size_t S>
-void   initEchoWorkers(std::array<App::AWorker *, S>& workers)
+void   initEchoWorkers(std::array<App::EchoWorker *, S>& workers)
 {
   for (auto& worker: workers)
   {
@@ -18,7 +18,7 @@ void   initEchoWorkers(std::array<App::AWorker *, S>& workers)
 int   main()
 {
   // create workers
-  std::array<App::AWorker *, 4>  workers;
+  std::array<App::EchoWorker *, 4>  workers;
 
   initEchoWorkers(workers);
 
