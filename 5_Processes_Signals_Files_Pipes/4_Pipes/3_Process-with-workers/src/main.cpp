@@ -5,34 +5,28 @@
 
 #include "EchoWorker/EchoWorker.hpp"
 
-template <size_t S>
-void   initEchoWorkers(std::array<App::EchoWorker *, S>& workers)
-{
-  for (auto& worker: workers)
-  {
-    worker = new App::EchoWorker();
-    worker->exec();
-  }
-}
 
 int   main()
 {
   // create workers
-  std::array<App::EchoWorker *, 4>  workers;
-
-  initEchoWorkers(workers);
-
+  std::array<App::EchoWorker, 4>  workers;
+  for (auto& worker: workers)
+    worker.exec();
 
   // make requests to workers
   while (true)
   {
-    int fd = open("testfile.txt", O_RDONLY);
-    if (fd < 0)
-      throw std::runtime_error("open error");
+    for (size_t i = 0; i < workers.size(); ++i)
+    {
+      int fd = open("testfile.txt", O_RDONLY);
+      if (fd < 0)
+        throw std::runtime_error("open error");
 
-    for (auto& worker: workers)
-      std::cout << worker->call(fd) << std::endl;
-    close(fd);
+      std::cout << "Worker #" << i << ":\n{"
+                << workers[i].call(fd) << "}\n" << std::endl;
+
+      close(fd);
+    }
 
     std::cin.get();
   }

@@ -15,6 +15,8 @@
 
 namespace App
 {
+  // Static fields
+  std::vector<int>  AWorker::opened_sockets_;
 
   // Constructor
   AWorker::AWorker()
@@ -60,6 +62,9 @@ namespace App
     {
       this->socket_ = socket_pair[1];
       close(socket_pair[0]);
+      for (auto i : this->opened_sockets_) // delete sockets between workers
+        close(i);
+
       this->workerFunction();
       exit(0);
     }
@@ -69,6 +74,7 @@ namespace App
     // success
     this->socket_ = socket_pair[0];
     close(socket_pair[1]);
+    this->opened_sockets_.push_back(this->socket_);
   }
 
 } //!namespace App

@@ -1,11 +1,16 @@
 #pragma once
 
+#include <vector>
+
 namespace App
 {
  
   class AWorker
   {
   // Fields
+  private:
+    static std::vector<int> opened_sockets_;
+
   protected:
     int   pid_;
     int   socket_;

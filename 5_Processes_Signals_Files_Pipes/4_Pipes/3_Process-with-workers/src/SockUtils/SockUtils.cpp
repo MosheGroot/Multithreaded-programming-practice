@@ -26,14 +26,14 @@ namespace App::SockUtils
   void          send_string(int sock, const std::string& str)
   {
     size_t  total_sended = 0;
-    size_t  sended;
+    ssize_t sended;
 
     while ((sended = send(sock, str.c_str() + total_sended, str.size() - total_sended, 0)) > 0)
     {
       total_sended += sended;
     }
 
-    if (sended < 0)
+    if (sended < 0 || total_sended < str.size())
       throw std::runtime_error("can't send data: " + std::string(strerror(errno)));
   }
 
