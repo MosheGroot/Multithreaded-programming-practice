@@ -1,7 +1,7 @@
 #include "EchoWorker.hpp"
 
 #include "../SockUtils/SockUtils.hpp"
-#include <iostream>
+
 namespace App
 {
 
