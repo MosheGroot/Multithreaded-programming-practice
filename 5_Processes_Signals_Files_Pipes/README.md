@@ -12,6 +12,7 @@ Some simple tasks from the course + additional practice with my own examples:
 |6. [`Files/2_LockFile.cpp`](#files2_lockfilecpp)            | Simple program with "lock file" concept usage |
 |7. [`Pipes/1_Simple-shell-pipe`](#pipes1_simple-shell-pipe)       | Emulate shell executor with pipe only support |
 |8. [`Pipes/2_Fifo`](#pipes2_fifo)                    | Simple sender and client with `FIFO` file usage |
+|9. [`Pipes/3_Process-with-workers`](#pipes3_process-with-workers)    | Set up some `Echo` workers, passing FD to them and receive back the data from FD |
 
 
 
@@ -103,10 +104,24 @@ Simple sender and client with `FIFO` file usage.
 
 
 
+### `Pipes/3_Process-with-workers`
+
+Project structure:
+* abstract class `AWorker`: basic interface with fork and setting up socket-pairs between worker and main process
+* class `EchoWorker: AWorker`: simply recieve fd (using cmsg), reading data from it and sending it back to main process
+
+In example there is four `EchoWorkers` that reading one file every time I press enter.
+
+##### runtime
+
+![Screen Recording 2022-04-03 at 3 48 01 PM (1)](https://user-images.githubusercontent.com/44144647/161429292-f94052e2-e3ae-40e1-be4e-ea79a9d44f59.gif)
+
+
+
 ## Learned new
 * Non-blocking `waitpid`'s flag (`WNOHANG`)
 * ANSI, POSIX and Real Time signals
 * Fun fact: files are actually IPC too
 * `flock` and "lock file" concept (like in some databases)
 * `FIFO` files usage
-* Forwarding file descriptors throught socket pair in `Main process <-> Workers` scheme
+* FD passing throught socket pair in `Main process <-> Workers` scheme
